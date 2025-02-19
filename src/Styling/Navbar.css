@@ -1,0 +1,151 @@
+.icon-circle {
+    width: 40px;
+    /* Circle size */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    /* Creates the circle */
+    background-color: rgb(255, 112, 51);
+    /* Secondary color background */
+}
+
+.icon-circle i {
+    font-size: 16px;
+    /* Icon size */
+    color: #fff;
+    /* Icon color */
+}
+
+.nav-item {
+    list-style: none;
+    /* Remove default bullet points */
+    margin-right: 15px;
+    /* Space between icons */
+}
+
+.nav-link {
+    text-decoration: none;
+    /* Remove underline */
+    display: flex;
+    align-items: center;
+    /* Center alignment */
+}
+
+
+
+.accordion-header,
+.set_li_side {
+    font-family: 'Roboto', sans-serif;
+    /* Match font style */
+    font-size: 14px;
+    /* Adjust size to match */
+    font-weight: 400;
+    /* Use regular weight unless bold is needed */
+    color: #333;
+}
+
+.SSD {
+    Font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 350;
+    color: #353333;
+}
+
+.accordion-header {
+    font-weight: 600;
+    /* Slightly bold for headers */
+}
+
+.SSD {
+    font-weight: 600;
+    /* Slightly bold for headers */
+}
+
+.set_li_side {
+    margin: 5px 0;
+    /* Spacing between list items */
+}
+.navbar-toggler i,
+.navbar-icons i {
+  background: none; /* Removes the circular background */
+  border-radius: 0; /* Removes rounded corners */
+  padding: 0; /* Ensures no extra padding */
+}
+
+.navbar-toggler {
+  background: none; /* Removes any background around the toggle button */
+  border: none; /* Ensures the toggle button looks clean */
+}
+
+.navbar-brand img {
+  width: 40px; /* Adjust logo size */
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar-brand span {
+  color: #ff7033; /* Matches the brand color */
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.whatsapp-icon-container {
+    position: fixed;
+    bottom: 20px; /* Ensure it's at the bottom of the page */
+    right: 20px;  /* Ensure it's on the right side */
+    z-index: 9999; /* Keep it on top of all other elements */
+  }
+  
+  .whatsapp-icon {
+    display: inline-block; /* Ensures the anchor tag wraps the icon correctly */
+    background-color: #25d366;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .whatsapp-icon img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .qr-code {
+    position: absolute;
+    bottom: 60px;  /* Slight adjustment for better positioning */
+    left: -30px;   /* Adjust to avoid overlap */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  .qr-code span {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .qr-code .qr-img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .tooltip-inner {
+    background-color: #333; /* Dark background for better visibility */
+    color: #fff; /* White text */
+    font-size: 14px;
+  }
+  
+  .tooltip-arrow {
+    border-top-color: #333; /* Match tooltip arrow with background */
+  }
+  .logout-image {
+    width: 40px; /* Adjust the icon size */
+    height: 40px;
+    cursor: pointer;
+  }

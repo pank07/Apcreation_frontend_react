@@ -1,0 +1,27 @@
+
+  @media screen and (max-width: 760px) {
+    div.scroll-container {
+        background-color: white !important;
+        overflow: auto;
+        white-space: nowrap;
+        padding: 10px;
+        gap: 12px;
+      }
+      
+      div.scroll-container img {
+        padding: 10px;
+
+      }
+      .set_menu{
+        position: relative !important;
+        top:-5px !important;
+      }
+  }
+
+.done{
+  background-color: white !important;
+}
+
+body{
+  background-color: #fff3e0 !important; ;
+}

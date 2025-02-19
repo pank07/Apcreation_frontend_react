@@ -1,0 +1,34 @@
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .header img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .category-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+  }
+  
+  .category-card img {
+    width: 100px; /* Set a fixed width */
+    height: 100px; /* Set a fixed height */
+    border-radius: 50%; /* This makes the image circular */
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
+    margin-bottom: 10px; /* Adds some space between the image and the text */
+  }
+  
+  .category-card h5 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .other-categories h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  

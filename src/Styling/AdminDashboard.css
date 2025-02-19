@@ -1,0 +1,23 @@
+/* .admin-main-container {
+    margin-left: 12rem;
+    margin-top: 5rem;
+} */
+.doughnut-container {
+    margin-top: 5rem;
+    margin-left: 3rem;
+}
+/* .view-product-container {
+    margin-left: 10rem;
+} */
+.products-func-img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.login-select-input {
+    max-width: 15rem;
+}
+.login-select-button {
+    max-width: 8rem;
+    font-size: .8rem;
+}

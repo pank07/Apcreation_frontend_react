@@ -1,0 +1,597 @@
+.set_img {
+  transition: transform 0.4s !important;
+}
+
+.set_img:hover {
+  transform: scale(1.2) !important;
+}
+  .my_shadow11:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+  }
+  .container-fluid {
+    background-color: #fff3e0;
+    
+  }
+  
+  .page-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .product-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .product-container:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .product-description {
+    text-align: center;
+  }
+  
+  .product-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .product-price {
+    font-size: 16px;
+    color: #e67e22;
+    margin-bottom: 8px;
+  }
+  
+  .product-category {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 12px;
+  }
+  
+  .btn {
+    background-color: #e74c3c;
+    /* / color: white; / */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .btns {
+    background-color: #e74c3c;
+    /* / color: white; / */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .btns:hover {
+    background-color: #c0392b;
+  }
+  .btn:hover {
+    background-color: #c0392b;
+  }
+    
+  @import url(https://fonts.googleapis.com/css?family=Lato,700,300italic);
+  
+  body { 
+    background-color: #f0f0f0;
+    font-family: Lato, sans-serif;
+  }
+  
+  h1.page-title {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    color: #18c0cc;
+    font-weight: bold;
+  }
+  .product-name h1{
+    color: black !important;
+    /* / color: #e37740 !important; / */
+  }
+  .product-container {
+    background-color: #fff;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .tag-sale {
+    
+    width: 86px;
+    height: 98px;
+    position: absolute;
+    color: #fff;
+    right: -41px;
+    z-index: 9;
+    top: -44px;
+    transform: rotate(137deg);
+  }
+  
+  .tag-sale::before {
+    content: "SALE";
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    transform-origin: top center;
+    transform: rotate(222.5deg) translateX(-28px) translateY(-37px);
+  }
+  
+  .product-description {
+    background-color: #F7F7F7;
+    border-top: 1px solid #EFEFEF;
+    padding: 2px 22px;
+    color: #797979;
+  }
+  
+  .product-image {
+    padding: 20px;
+    height: 323px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+  }
+  
+  .product-link {
+    position: absolute;
+    background: #fff;
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+    font-size: 25px;
+    text-align: center;
+    padding: 22px 0;
+    line-height: 25px;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    opacity: 0;
+    transition: 1s;
+    font-style: italic;
+  }
+  
+  .product-link:hover {
+    text-decoration: none;
+ 
+  }
+  
+  
+  .hover-link {
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+  }
+  
+  .product-image img {
+    width: 100%;
+  }
+  
+  .product-description h1 {
+    font-size: 23px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    display: inline-block;
+    width: 78%;
+  }
+  
+  .product-description p {
+    color: #C4C4C4;
+  }
+  
+  .product-description .price {
+    display: inline-block;
+    width: 20%;
+    font-size: 23px;
+    text-align: right;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+  }
+  .category-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .view-details-link {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .category-container:hover .view-details-link {
+    display: block;
+  }
+  
+  .category-image img {
+    transition: transform 0.3s ease, border-radius 0.3s ease; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 50%;
+  }
+  
+  /* .category-container:hover .category-image img {
+    transform: scale(1.1); 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+  } */
+  .product-option {
+    border-top: 1px solid #D2D2D2;
+  }
+  
+  .product-option h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 3px;
+  }
+  
+  .product-option .product-color ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .product-option .product-color li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+  }
+  
+  .product-color li.red {
+    background-color: #F75375;
+  }
+  .product-color li.blue {
+    background-color: #53A0F7;
+  }
+  .product-color li.green {
+    background-color: #59CFAF;
+  }
+  .product-color li.gray {
+    background-color: #C7C7C7;
+  }
+  .product-color li.black {
+    background-color: #4E5156;
+  }
+  .product-color li.dark-blue {
+    background-color: #2060AF;
+  }
+  
+  .product-container:hover {
+    box-shadow: 0px 10px 25px -2px rgba(0,0,0,0.36);
+  }
+  
+  .product-container:hover .product-image {
+    height: 180px;
+    transition: 1s;
+  }
+  .product-container:hover .product-option {
+    display: block;
+  }
+  .product-container:hover .hover-link {
+    opacity: 0.5;
+  }
+  .product-container:hover .product-link {
+    opacity: 1;
+  }
+  
+  .product-link:hover {
+    -webkit-animation: hovering 1000ms linear both;
+    animation: hovering 1000ms linear both;
+  }
+  
+  @-webkit-keyframes hovering {
+    0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    2.3% { -webkit-transform: matrix3d(1.102, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.102, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    4.6% { -webkit-transform: matrix3d(1.136, 0, 0, 0, 0, 1.136, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.136, 0, 0, 0, 0, 1.136, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    7.41% { -webkit-transform: matrix3d(1.099, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.099, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    10.21% { -webkit-transform: matrix3d(1.023, 0, 0, 0, 0, 1.023, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.023, 0, 0, 0, 0, 1.023, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    13.01% { -webkit-transform: matrix3d(0.962, 0, 0, 0, 0, 0.962, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.962, 0, 0, 0, 0, 0.962, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    15.72% { -webkit-transform: matrix3d(0.942, 0, 0, 0, 0, 0.942, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.942, 0, 0, 0, 0, 0.942, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    18.52% { -webkit-transform: matrix3d(0.958, 0, 0, 0, 0, 0.958, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.958, 0, 0, 0, 0, 0.958, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    21.32% { -webkit-transform: matrix3d(0.99, 0, 0, 0, 0, 0.99, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99, 0, 0, 0, 0, 0.99, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    24.12% { -webkit-transform: matrix3d(1.016, 0, 0, 0, 0, 1.016, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.016, 0, 0, 0, 0, 1.016, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    26.83% { -webkit-transform: matrix3d(1.025, 0, 0, 0, 0, 1.025, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.025, 0, 0, 0, 0, 1.025, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    32.43% { -webkit-transform: matrix3d(1.004, 0, 0, 0, 0, 1.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.004, 0, 0, 0, 0, 1.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    38.04% { -webkit-transform: matrix3d(0.989, 0, 0, 0, 0, 0.989, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.989, 0, 0, 0, 0, 0.989, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    49.15% { -webkit-transform: matrix3d(1.005, 0, 0, 0, 0, 1.005, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.005, 0, 0, 0, 0, 1.005, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    60.26% { -webkit-transform: matrix3d(0.998, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.998, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    71.37% { -webkit-transform: matrix3d(1.001, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.001, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    82.48% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    93.59% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  }
+  
+  @keyframes hovering {
+    0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    2.3% { -webkit-transform: matrix3d(1.102, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.102, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    4.6% { -webkit-transform: matrix3d(1.136, 0, 0, 0, 0, 1.136, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.136, 0, 0, 0, 0, 1.136, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    7.41% { -webkit-transform: matrix3d(1.099, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.099, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    10.21% { -webkit-transform: matrix3d(1.023, 0, 0, 0, 0, 1.023, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.023, 0, 0, 0, 0, 1.023, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    13.01% { -webkit-transform: matrix3d(0.962, 0, 0, 0, 0, 0.962, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.962, 0, 0, 0, 0, 0.962, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    15.72% { -webkit-transform: matrix3d(0.942, 0, 0, 0, 0, 0.942, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.942, 0, 0, 0, 0, 0.942, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    18.52% { -webkit-transform: matrix3d(0.958, 0, 0, 0, 0, 0.958, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.958, 0, 0, 0, 0, 0.958, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    21.32% { -webkit-transform: matrix3d(0.99, 0, 0, 0, 0, 0.99, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.99, 0, 0, 0, 0, 0.99, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    24.12% { -webkit-transform: matrix3d(1.016, 0, 0, 0, 0, 1.016, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.016, 0, 0, 0, 0, 1.016, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    26.83% { -webkit-transform: matrix3d(1.025, 0, 0, 0, 0, 1.025, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.025, 0, 0, 0, 0, 1.025, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    32.43% { -webkit-transform: matrix3d(1.004, 0, 0, 0, 0, 1.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.004, 0, 0, 0, 0, 1.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    38.04% { -webkit-transform: matrix3d(0.989, 0, 0, 0, 0, 0.989, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.989, 0, 0, 0, 0, 0.989, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    49.15% { -webkit-transform: matrix3d(1.005, 0, 0, 0, 0, 1.005, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.005, 0, 0, 0, 0, 1.005, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    60.26% { -webkit-transform: matrix3d(0.998, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.998, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    71.37% { -webkit-transform: matrix3d(1.001, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.001, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    82.48% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    93.59% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  }
+  
+ 
+  .container-fluid {
+    background-color: #fff3e0;
+    
+  }
+  
+  .page-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+.container-wrapper {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+
+.flex-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap; 
+}
+
+
+.left-panel, .right-panel {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%; 
+}
+
+
+.panel-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.item-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.single-item-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  width: 250px;
+  height: 375px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;  
+}
+
+
+.item-image {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  background-color: #f2f2f2;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+
+.item-title {
+  font-size: 18px;
+  color: #444;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+
+.action-button {
+  position: relative;
+  top: 35px;
+  background-color: rgb(255 86 0 / 78%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  width: auto;
+}
+
+
+.all-button {
+  background-color: transparent;
+  color: rgb(255 86 0 / 78%);
+  border: 2px solid rgb(255 86 0 / 78%);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.all-button:hover {
+  background-color:rgba(224, 93, 28, 0.849);
+  color: white;
+}
+
+.separator {
+  width: 2px;
+  background-color: #ddd;
+  height: 100%;
+  margin-top: 20px;
+}
+
+
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .flex-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .left-panel, .right-panel {
+    flex: unset;
+    width: 100%;
+  }
+
+  .item-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .action-button {
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+
+  .all-button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-item {
+    width: 100%;
+    height: auto;
+  }
+
+  .item-title {
+    font-size: 16px;
+  }
+
+  .action-button {
+    font-size: 12px;
+    padding: 8px 16px;
+    width: 100%;
+    top: auto; 
+    margin-top: 10px;
+  }
+
+  .all-button {
+    font-size: 12px;
+  }
+
+  .panel-title {
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 465px) {
+  .card-item {
+    width: 100%;
+    height: auto;
+  }
+
+  .item-title {
+    font-size: 14px;
+  }
+
+  .action-button {
+    font-size: 10px;
+    padding: 6px 14px;
+    width: 100%; 
+    margin-top: 10px;
+  }
+
+  .all-button {
+    font-size: 10px;
+  }
+
+  .panel-title {
+    font-size: 16px;
+  }
+
+  .flex-layout {
+    flex-direction: column; 
+  }
+
+  .left-panel, .right-panel {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .item-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; 
+  }
+
+  .separator {
+    display: none;
+  }
+}
+
+
+.my-truncate {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

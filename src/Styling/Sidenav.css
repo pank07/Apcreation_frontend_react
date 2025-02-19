@@ -1,0 +1,133 @@
+/* Main dropdown section */
+.set_li_side {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.set_li_sides {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* On hover, change background color */
+.set_li_side:hover {
+    background-color: #f0f0f0;
+}
+.set_li_sides:hover {
+    background-color: #f0f0f0;
+}
+
+/* Nested dropdown (sub-menu) styling */
+.set_li_side ul {
+    padding-left: 20px;
+    margin-top: 5px;
+    display: none; /* Initially hide sub-menu */
+}
+.set_li_sides ul {
+    padding-left: 20px;
+    margin-top: 5px;
+    display: none; /* Initially hide sub-menu */
+}
+
+/* Show sub-menu when dropdown is open */
+.set_li_side ul.open {
+    display: block;
+}
+.set_li_sides ul.open {
+    display: block;
+}
+
+/* Adding a unique style for each dropdown category */
+.set_li_side.aasans {
+    background-color: #dff0d8; /* Greenish for Aasans & Chunris */
+}
+
+.set_li_side.brassPuja {
+    background-color: #f2dede; /* Light red for Brass Puja Articles */
+}
+
+.set_li_side.pendants {
+    background-color: #d9edf7; /* Light blue for Pendants/lockets */
+}
+
+.set_li_side.poojaSamagri {
+    background-color: #fcf8e3; /* Light yellow for Pooja Samagri */
+}
+
+.set_li_side.publicProgramme {
+    background-color: #fce2b3; /* Light orange for Public Programme Articles */
+}
+
+/* Adjust hover and active state for each category */
+.set_li_side.aasans:hover {
+    background-color: #c1e0c1;
+}
+
+.set_li_side.brassPuja:hover {
+    background-color: #f0d0d0;
+}
+
+.set_li_side.pendants:hover {
+    background-color: #b3d9f3;
+}
+
+.set_li_side.poojaSamagri:hover {
+    background-color: #f0e6b3;
+}
+
+.set_li_side.publicProgramme:hover {
+    background-color: #f0d4a6;
+}
+
+/* Adding a dropdown arrow */
+.set_li_side:after {
+    /* content: " ▼"; */
+    font-size: 12px;
+    color: #999;
+    padding-left: 5px;
+}
+.set_li_sides:after {
+    /* content: " ▼"; */
+    font-size: 12px;
+    color: #999;
+    padding-left: 5px;
+}
+
+/* Rotate the arrow when the dropdown is open */
+.set_li_side.open:after {
+    transform: rotate(180deg);
+}
+.set_li_sides.open:after {
+    transform: rotate(180deg);
+}
+
+/* Styling for links inside dropdown */
+.set_li_side a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+.set_li_sides a {
+    text-decoration: none;
+    color: #333;
+    display: black;
+    padding: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect on dropdown links */
+.set_li_side a:hover {
+    background-color: #ddd;
+    border-radius: 4px;
+}
+.set_li_sides a:hover {
+    background-color: #ddd;
+    border-radius: 4px;
+}

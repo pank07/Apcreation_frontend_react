@@ -1,0 +1,369 @@
+.contact-background {
+    display: flex;
+    min-height: 100vh;
+}
+
+.contact-container {
+    flex: 0 1 900px;
+    margin: auto;
+    padding: 10px;
+}
+
+.contact-screen {
+    margin: 5rem 0;
+    position: relative;
+    background: #000;
+    backdrop-filter: blur(24px) saturate(143%);
+    -webkit-backdrop-filter: blur(24px) saturate(143%);
+    background-color: rgba(39, 39, 39, 0.591);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.contact-screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    z-index: -1;
+}
+
+.contact-screen-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #4d4d4f;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.contact-screen-header-left {
+    margin-right: auto;
+}
+
+.contact-screen-header-button {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 3px;
+    border-radius: 8px;
+    background: white;
+}
+
+.contact-screen-header-button.contact-close {
+    background: #ed1c6f;
+}
+
+.contact-screen-header-button.contact-maximize {
+    background: #e8e925;
+}
+
+.contact-screen-header-button.contact-minimize {
+    background: #74c54f;
+}
+
+.contact-screen-header-right {
+    display: flex;
+}
+
+.contact-screen-header-ellipsis {
+    width: 3px;
+    height: 3px;
+    margin-left: 2px;
+    border-radius: 8px;
+    background: #999;
+}
+
+.contact-screen-body {
+    display: flex;
+}
+
+.contact-screen-body-item {
+    flex: 1;
+    padding: 50px;
+}
+
+.contact-screen-body-item.contact-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-app-title {
+    display: flex;
+    flex-direction: row;
+    gap: .7rem;
+    position: relative;
+    color: aqua;
+    font-size: 26px;
+}
+
+.contact-app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: aqua;
+}
+
+.contact-image {
+    border-radius: 15px;
+    margin-top: 3rem;
+}
+
+.contact-app-contact {
+    margin-top: auto;
+    font-size: 8px;
+    color: #888;
+}
+
+.contact-app-form-group {
+    margin-top: 1rem;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-app-form-group.contact-message {
+    margin-top: 40px;
+}
+
+.contact-app-form-group.contact-buttons {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.contact-app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: #ddd;
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+}
+
+.contact-app-form-control::placeholder {
+    color: #666;
+}
+
+.contact-app-form-control:focus {
+    border-bottom-color: #ddd;
+}
+
+.contact-app-form-button {
+    background: none;
+    border: none;
+    color: aqua;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 2rem;
+}
+
+.contact-app-form-button:hover {
+    color: rgb(0, 208, 208);
+}
+
+.contact-credits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: #ffa4bd;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.contact-credits-link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-dribbble {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+
+@media screen and (max-width: 520px) {
+    .contact-screen-body {
+        flex-direction: column;
+    }
+
+    .contact-screen-body-item.contact-left {
+        margin-bottom: 30px;
+    }
+
+    .contact-app-title {
+        flex-direction: row;
+    }
+
+    .contact-app-title span {
+        margin-right: 12px;
+        margin-top: 2rem;
+    }
+
+    .contact-app-title:after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-screen-body {
+        padding: 40px;
+    }
+
+    .contact-screen-body-item {
+        padding: 0;
+    }
+}
+
+/* sadsad */
+/* Importing Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffece3;
+}
+
+.contact-section {
+  background-color: #ffece3;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-heading {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Top Contact Cards */
+.contact-info-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.info-card {
+  background: white;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 20rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  color: #f78f3f;
+}
+
+.info-card p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Contact Form */
+.contact-form-container {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.contact-form-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.contact-form-container p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #777;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-control {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+.send-button {
+  background-color: #f78f3f;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.send-button:hover {
+  background-color: #f7651f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-info-cards {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+}

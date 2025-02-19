@@ -1,0 +1,47 @@
+.category-container {
+    padding: 10px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .category-container:hover {
+    transform: scale(1.05);
+  }
+  .white-text {
+    color: #fff !important;
+  }
+  .category-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+  }
+  
+  .category-name p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  .view-details-link {
+    display: inline-block;
+    font-size: 12px;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .view-details-link:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (min-width: 768px) {
+    .category-image img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
