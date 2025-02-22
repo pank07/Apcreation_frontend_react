@@ -23,9 +23,14 @@ const ConfirmOrder = () => {
     return <p>Loading...</p>;
   }
   const savedShippingCharges = localStorage.getItem("shippingCharges");
+  const address=localStorage.getItem("address")
+  const name=localStorage.getItem("name");
+  const mobile=localStorage.getItem("mobile");
+
+
   console.log(savedShippingCharges);
   
-  const address =` ${shippingInfo.address}, ${shippingInfo.city}, ${shippingInfo.state}, ${shippingInfo.pinCode}, ${shippingInfo.country}`;
+  //const address =` ${shippingInfo.address};
 
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.quantity * item.price,
@@ -126,7 +131,7 @@ const ConfirmOrder = () => {
                   <div className="row">
                     <p className="cart-product-name">
                       <strong>Name: </strong>
-                      <strong>{user?.name}</strong>
+                      <strong>{name}</strong>
                     </p>
                     <p className="cart-product-name">
                       <small>Address: </small>
@@ -134,7 +139,7 @@ const ConfirmOrder = () => {
                     </p>
                     <p className="cart-product-name">
                       <small>Phone Number: </small>
-                      <small>{shippingInfo.phoneNo}</small>
+                      <small>{mobile}</small>
                     </p>
                   </div>
                 </div>

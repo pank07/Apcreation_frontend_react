@@ -48,6 +48,7 @@ import CookiesPolicy from './Policies/CookiesPolicy';
 import Disclaimer from './Policies/Disclaimer';
 import ReturnRefundPolicy from './Policies/ReturnRefundPolicy';
 import Shippingpolicy from './Policies/Shippingpolicy';
+import CheckoutNew from './Pages/CheckoutNew';
 // axios.defaults.withCredentials = true;
 axios.defaults.headers.common['token'] = localStorage.getItem('token')
 
@@ -98,6 +99,7 @@ function App() {
         {/* Cart Routes */}
         <Route path='/cart' element={<Cart />} />
         <Route path='/cart/shipping' element={<Checkout />} />
+        <Route path='/cart/shipping/new' element={<CheckoutNew />} />
         <Route path='/cart/order-confirm' element={<ConfirmOrder />} />
         <Route path='/ForgetPasswordEmail' element={<ForgetPasswordEmail />} />
         <Route path='/success' element={<PaymentSuccess />} />
@@ -138,7 +140,7 @@ function App() {
       </Routes>
       <Footer/>
     </>
-  );
+  );  
 }
 
 export default App;
