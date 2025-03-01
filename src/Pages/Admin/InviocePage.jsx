@@ -11,6 +11,7 @@ import { jsPDF } from "jspdf";
 import "jspdf-autotable";
 
 const InvoicePage = () => {
+
   const { orderId } = useParams();
   const { order, loading, error } = useSelector((state) => state.orderDetails);
   const dispatch = useDispatch();
@@ -50,43 +51,80 @@ const InvoicePage = () => {
       pdf.addImage(Aplogo, "PNG", 80, 10, 60, 20); // Adjust position & size
     }
   
-    // Title
+    // // Title
+    // pdf.setFontSize(18);
+    // // pdf.text("Invoice", , 40, { align: "center" });
+  
+    // // Order Details
+    // pdf.setFontSize(12);
+    // pdf.setFont("helvetica", "normal");
+    // pdf.text(`Order ID: ${order?.order?.paymentInfo?.id || "N/A"}`, 15, 50);
+    // pdf.text(
+    //   `Date: ${order?.order?.paymentInfo?.createdAt
+    //     ? new Date(order.order.paymentInfo.createdAt).toLocaleString()
+    //     : "N/A"
+    //   }`,
+    //   15,
+    //   60
+    // );
+  
+    // // Customer Details
+    // pdf.setFont("helvetica", "bold");
+    // pdf.text("Customer Details:", 15, 70);
+    // pdf.setFont("helvetica", "normal");
+    // pdf.text(`Name: ${order?.order?.user?.name || "N/A"}`, 15, 80);
+    // pdf.text(`Email: ${order?.order?.user?.email || "N/A"}`, 15, 90);
+  
+    // // Shipping Info
+    // pdf.setFont("helvetica", "bold");
+    // pdf.text("Shipping Information:", 15, 100);
+    // pdf.setFont("helvetica", "normal");
+    // pdf.text(
+    //   `Address: ${order?.order?.shippingInfo?.address || "N/A"}, ${order?.order?.shippingInfo?.city || "N/A"}, 
+    //    ${order?.order?.shippingInfo?.state || "N/A"}, ${order?.order?.shippingInfo?.country || "N/A"}`,
+    //   15,
+    //   110,
+    //   { maxWidth: 180 }
+    // );
+    // pdf.text(`Pin Code: ${order?.order?.shippingInfo?.pinCode || "N/A"}`, 15, 120);
+    // pdf.text(`Phone: ${order?.order?.shippingInfo?.phoneNo || "N/A"}`, 15, 130);
     pdf.setFontSize(18);
-    // pdf.text("Invoice", , 40, { align: "center" });
-  
-    // Order Details
-    pdf.setFontSize(12);
-    pdf.setFont("helvetica", "normal");
-    pdf.text(`Order ID: ${order?.order?.paymentInfo?.id || "N/A"}`, 15, 50);
-    pdf.text(
-      `Date: ${order?.order?.paymentInfo?.createdAt
-        ? new Date(order.order.paymentInfo.createdAt).toLocaleString()
-        : "N/A"
-      }`,
-      15,
-      60
-    );
-  
-    // Customer Details
-    pdf.setFont("helvetica", "bold");
-    pdf.text("Customer Details:", 15, 70);
-    pdf.setFont("helvetica", "normal");
-    pdf.text(`Name: ${order?.order?.user?.name || "N/A"}`, 15, 80);
-    pdf.text(`Email: ${order?.order?.user?.email || "N/A"}`, 15, 90);
-  
-    // Shipping Info
-    pdf.setFont("helvetica", "bold");
-    pdf.text("Shipping Information:", 15, 100);
-    pdf.setFont("helvetica", "normal");
-    pdf.text(
-      `Address: ${order?.order?.shippingInfo?.address || "N/A"}, ${order?.order?.shippingInfo?.city || "N/A"}, 
-       ${order?.order?.shippingInfo?.state || "N/A"}, ${order?.order?.shippingInfo?.country || "N/A"}`,
-      15,
-      110,
-      { maxWidth: 180 }
-    );
-    pdf.text(`Pin Code: ${order?.order?.shippingInfo?.pinCode || "N/A"}`, 15, 120);
-    pdf.text(`Phone: ${order?.order?.shippingInfo?.phoneNo || "N/A"}`, 15, 130);
+pdf.text("Invoice", 105, 40, { align: "center" });
+
+// Order Details
+pdf.setFontSize(12);
+pdf.setFont("helvetica", "normal");
+pdf.text(`Order ID: ${order?.order?.paymentInfo?.id || "N/A"}`, 15, 50);
+pdf.text(
+  `Date: ${order?.order?.paymentInfo?.createdAt
+    ? new Date(order.order.paymentInfo.createdAt).toLocaleString()
+    : "N/A"
+  }`,
+  15,
+  60
+);
+
+// Customer Details (Left Side)
+pdf.setFont("helvetica", "bold");
+pdf.text("Customer Details:", 15, 80);
+pdf.setFont("helvetica", "normal");
+pdf.text(`Name: ${order?.order?.user?.name || "N/A"}`, 15, 90);
+pdf.text(`Email: ${order?.order?.user?.email || "N/A"}`, 15, 100);
+
+// Shipping Information (Right Side)
+pdf.setFont("helvetica", "bold");
+pdf.text("Shipping Information:", 110, 80); // Shifted right
+pdf.setFont("helvetica", "normal");
+pdf.text(
+  `Address: ${order?.order?.shippingInfo?.address || "N/A"}, ${order?.order?.shippingInfo?.city || "N/A"}, 
+  ${order?.order?.shippingInfo?.state || "N/A"}, ${order?.order?.shippingInfo?.country || "N/A"}`,
+  110,
+  90,
+  { maxWidth: 90 } // Adjust width for text wrapping
+);
+pdf.text(`Pin Code: ${order?.order?.shippingInfo?.pinCode || "N/A"}`, 110, 120);
+pdf.text(`Phone: ${order?.order?.shippingInfo?.phoneNo || "N/A"}`, 110, 130);
+
   
     // Order Status
     pdf.setFont("helvetica", "bold");
@@ -94,8 +132,8 @@ const InvoicePage = () => {
     pdf.setFont("helvetica", "normal");
     pdf.text(`Order Status: ${order?.order?.paymentInfo?.orderStatus || "N/A"}`, 15, 150);
     pdf.text(`Payment Status: ${order?.order?.paymentInfo?.status || "N/A"}`, 15, 160);
-    pdf.text(`Total Price: $${order?.order?.paymentInfo?.totalPrice || "0.00"}`, 15, 170);
-  
+    pdf.text(`Total Price: Rs${order?.order?.paymentInfo?.totalPrice || "0.00"}`, 15, 170);
+
     // Check if orderItems exist
     const orderItems = order?.order?.orderItems;
     if (!orderItems || orderItems.length === 0) {
@@ -108,7 +146,8 @@ const InvoicePage = () => {
     const tableRows = [];
   
     orderItems.forEach((item) => {
-      tableRows.push([item.name || "N/A", `$${item.price || "0.00"}`, item.quantity || "0"]);
+      tableRows.push([item.name || "N/A", `  ${item.price || "0.00"}`, item.quantity || "0"]);
+      
     });
   
     // Add Table
@@ -121,6 +160,7 @@ const InvoicePage = () => {
   
     // Save PDF
     pdf.save(`Invoice_${order?.order?.paymentInfo?.id || "N/A"}.pdf`);
+    
   };
   
   
