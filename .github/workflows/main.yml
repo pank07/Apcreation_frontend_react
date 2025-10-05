@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu
+    runs-on: pank04-ThinkPad-E580
 
     steps:
       - name: 🧹 Checkout code
