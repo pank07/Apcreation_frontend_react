@@ -40,7 +40,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            cd /var/www/my-node-app
+            cd /var/www/apcreation
             git fetch origin main
             git reset --hard origin/main
             npm ci --omit=dev
