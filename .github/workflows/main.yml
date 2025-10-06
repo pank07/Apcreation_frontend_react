@@ -44,5 +44,6 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             npm ci --omit=dev
-            pm2 restart my-node-app || pm2 start src/app.js --name my-node-app
+            pm2 restart apcreation 
+            #|| pm2 start src/app.js --name my-node-app
             echo "✅ Deployment completed at $(date)"
