@@ -54,5 +54,5 @@ jobs:
             docker stop my-app || true
             docker rm my-app || true
 
-            docker run -d -p 80:80 --name my-app \
-              484916371129.dkr.ecr.ap-south-1.amazonaws.com/my-app-repo:latest
+            docker run -d -p 80:80 --name apcreation \
+              484916371129.dkr.ecr.ap-south-1.amazonaws.com/apcreation:latest
