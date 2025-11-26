@@ -41,9 +41,9 @@ jobs:
       - name: Deploy to EC2 via SSH
         uses: appleboy/ssh-action@v0.1.10
         with:
-          host: ${{ secrets.EC2_HOST }}
+          host: ${{ secrets.LOCAL_HOST }}
           username: ubuntu
-          key: ${{ secrets.EC2_SSH_KEY }}
+          key: ${{ secrets.LOCAL_SSH_KEY }}
           script: |
             aws ecr get-login-password --region ap-southeast-2 | 
               docker login --username AWS --password-stdin $ECR_RESGISTRY
