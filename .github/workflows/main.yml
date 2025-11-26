@@ -35,7 +35,6 @@ jobs:
           IMAGE_TAG: latest
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-          docker tag $ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
       # 📦 Step 5: Deploy to EC2 server
@@ -46,13 +45,14 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            aws ecr get-login-password --region ap-southeast-2 | \
-              docker login --username AWS --password-stdin 484916371129.dkr.ecr.ap-southeast-2.amazonaws.com
+            aws ecr get-login-password --region ap-southeast-2 | 
+              docker login --username AWS --password-stdin $ECR_RESGISTRY
 
-            docker pull 484916371129.dkr.ecr.ap-southeast-2.amazonaws.com/apcreation:latest
+            docker pull $ECR_REGISTRY$/$ECR_REPOSITORY:$IMAGE_TAG
 
             docker stop apcreation || true
             docker rm apcreation || true
 
-            docker run -d -p 80:80 --name apcreation \
-              484916371129.dkr.ecr.ap-southeast-2.amazonaws.com/apcreation:latest
+            docker run -d -p 80:80 --name apcreation 
+             $ECR_REGISTRY$/$ECR_REPOSITORY:$IMAGE_TAG
+              
