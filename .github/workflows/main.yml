@@ -49,7 +49,7 @@ jobs:
             aws ecr get-login-password --region ap-south-1 | \
               docker login --username AWS --password-stdin 484916371129.dkr.ecr.ap-south-1.amazonaws.com
 
-            docker pull 484916371129.dkr.ecr.ap-south-1.amazonaws.com/my-app-repo:latest
+            docker pull 484916371129.dkr.ecr.ap-south-1.amazonaws.com/apcreation:latest
 
             docker stop my-app || true
             docker rm my-app || true
