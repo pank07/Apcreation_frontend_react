@@ -30,8 +30,8 @@ jobs:
       # 🐳 Step 4: Build, tag, and push Docker image
       - name: Build, tag, and push image to ECR
         env:
-          ECR_REGISTRY: 484916371129.dkr.ecr.ap-south-1.amazonaws.com
-          ECR_REPOSITORY: my-app-repo
+          ECR_REGISTRY: 484916371129.dkr.ecr.ap-southeast-2.amazonaws.com
+          ECR_REPOSITORY: apcreation
           IMAGE_TAG: latest
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
@@ -46,10 +46,10 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            aws ecr get-login-password --region ap-south-1 | \
-              docker login --username AWS --password-stdin 484916371129.dkr.ecr.ap-south-1.amazonaws.com
+            aws ecr get-login-password --region ap-southeast-2 | \
+              docker login --username AWS --password-stdin 484916371129.dkr.ecr.ap-southeast-2.amazonaws.com
 
-            docker pull 484916371129.dkr.ecr.ap-south-1.amazonaws.com/apcreation:latest
+            docker pull 484916371129.dkr.ecr.ap-southeast-2.amazonaws.com/apcreation:latest
 
             docker stop my-app || true
             docker rm my-app || true
