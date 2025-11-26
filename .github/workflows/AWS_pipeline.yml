@@ -1,0 +1,58 @@
+name: Deploy to AWS EC2
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 🧩 Step 1: Checkout code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 🔐 Step 2: Configure AWS credentials (REQUIRED since outside AWS)
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-south-1
+
+      # ⚙️ Step 3: Log in to Amazon ECR
+      - name: Login to Amazon ECR
+        uses: aws-actions/amazon-ecr-login@v2
+
+      # 🐳 Step 4: Build, tag, and push Docker image
+      - name: Build, tag, and push image to ECR
+        env:
+          ECR_REGISTRY: 484916371129.dkr.ecr.ap-south-1.amazonaws.com
+          ECR_REPOSITORY: apcreation
+          IMAGE_TAG: latest
+        run: |
+          docker build -t $ECR_REPOSITORY:$IMAGE_TAG .
+          docker tag $ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+
+      # 📦 Step 5: Deploy to EC2 server
+      - name: Deploy to EC2 via SSH
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            aws ecr get-login-password --region ap-south-1 | \
+              docker login --username AWS --password-stdin 484916371129.dkr.ecr.ap-south-1.amazonaws.com
+
+            docker pull 484916371129.dkr.ecr.ap-southeast-2.amazonaws.com/apcreation
+
+            docker stop my-app || true
+            docker rm my-app || true
+
+            docker run -d -p 80:80 --name my-app \
+              484916371129.dkr.ecr.ap-south-1.amazonaws.com/my-app-repo:latest , is it correct pipeline
