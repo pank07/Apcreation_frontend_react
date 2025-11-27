@@ -55,4 +55,4 @@ jobs:
             docker rm my-app || true
 
             docker run -d -p 80:80 --name apcreation \
-              484916371129.dkr.ecr.ap-south-1.amazonaws.com/apcreation:latest
+              484916371129.dkr.ecr.ap-southeast-2.amazonaws.com/apcreation:latest
