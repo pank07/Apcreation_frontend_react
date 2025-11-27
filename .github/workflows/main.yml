@@ -42,7 +42,7 @@ jobs:
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.LOCAL_HOST }}
-          username: ubuntu
+          username: ${{ secrets.LOCAL_SSH_USER }}
           key: ${{ secrets.LOCAL_SSH_KEY }}
           script: |
             aws ecr get-login-password --region ap-southeast-2 | 
