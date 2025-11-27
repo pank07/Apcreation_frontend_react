@@ -48,7 +48,7 @@ jobs:
             aws ecr get-login-password --region ap-southeast-2 | 
               docker login --username AWS --password-stdin $ECR_RESGISTRY
 
-            docker pull $ECR_REGISTRY$/$ECR_REPOSITORY:$IMAGE_TAG
+            docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
             docker stop apcreation || true
             docker rm apcreation || true
