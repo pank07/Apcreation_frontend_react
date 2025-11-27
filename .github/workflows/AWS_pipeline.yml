@@ -45,14 +45,14 @@ jobs:
           host: ${{ secrets.LOCAL_HOST }}
           username: ${{secrets.LOCAL_SSH_USER}}
           key: ${{ secrets.LOCAL_SSH_KEY }}
-          script: |
-            aws ecr get-login-password --region ap-southeast-2 | \
-              docker login --username AWS --password-stdin 484916371129.dkr.ecr.ap-southeast-2.amazonaws.com
+          script: 
+            aws ecr get-login-password --region ap-southeast-2  
+            docker login --username AWS --password-stdin 484916371129.dkr.ecr.ap-southeast-2.amazonaws.com
 
             docker pull 484916371129.dkr.ecr.ap-southeast-2.amazonaws.com/apcreation
 
             docker stop my-app || true
             docker rm my-app || true
 
-            docker run -d -p 80:80 --name apcreation \
+            docker run -d -p 80:80 --name apcreation 
               484916371129.dkr.ecr.ap-southeast-2.amazonaws.com/apcreation:latest
