@@ -39,7 +39,7 @@ jobs:
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
       # 📦 Step 5: Deploy to EC2 server
-      - name: Deploy to EC2 via SSH
+      - name: Deploy to Local-ubuntu via SSH
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.EC2_HOST }}
